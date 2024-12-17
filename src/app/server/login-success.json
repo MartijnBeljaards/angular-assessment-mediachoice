@@ -1,0 +1,24 @@
+{
+    "data": {
+        "id": "test",
+        "username": "Username",
+        "level": 1,
+        "previousLogin": "0000-00-00T00:00:00.0000000",
+        "token": "test",
+        "tokenExpiry": "0000-00-00T00:00:00.0000000Z",
+        "refreshToken": "test",
+        "refreshTokenExpiry": "0000-00-00T00:00:00.0000000Z",
+        "state": 1
+    },
+    "success": true,
+    "performanceCost": 5141,
+    "source": " - DEBUG",
+    "statusCode": 200,
+    "resultMessages": [
+        {
+            "code": 200,
+            "message": "Ok",
+            "innerMessage": null
+        }
+    ]
+}

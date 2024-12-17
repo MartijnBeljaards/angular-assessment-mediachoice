@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": null,
+        "username": "",
+        "level": 0,
+        "previousLogin": null,
+        "token": "",
+        "tokenExpiry": "0001-01-01T00:00:00",
+        "refreshToken": "",
+        "refreshTokenExpiry": "0001-01-01T00:00:00",
+        "state": 0,
+        "tenantRights": null
+    },
+    "success": false,
+    "performanceCost": 6908,
+    "source": " - DEBUG",
+    "statusCode": 5000,
+    "resultMessages": [
+        {
+            "code": 7,
+            "message": "Username or password is incorrect.",
+            "innerMessage": null
+        }
+    ]
+}

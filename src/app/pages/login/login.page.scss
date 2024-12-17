@@ -1,0 +1,44 @@
+.main {
+  position: relative;
+  color: #ffffff;
+  background-color: #141C37;
+  height: calc(100vh - 2.5rem);
+  width: 100vw;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-control .label-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form-control input {
+  width: 100%
+}
+
+a {
+  color: #68A812;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  background-color: #68A812;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.validation {
+  background-color: #C22020;
+  color: #ffffff;
+}
