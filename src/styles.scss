@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@use './app/styles/variables';
+@import './app/styles/variables';
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: $font-basesize;
     line-height: 1.5;
     box-sizing: border-box;
+    font-family: $font-family;
 }
+
+/* font header = weight: 700 */

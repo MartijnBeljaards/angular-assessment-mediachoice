@@ -1,1 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* NOTE: I checked the preview images for what FONT might've been used
+ and got "Baloo 2" as a result font. However this font was very buggy
+ in my browser so I used a substitute "Roboto" instead... */
+ 
 /* Global variables */
+$font-family:           "Roboto", serif; 
+$font-basesize:         16px;
+
+/* Colors (Picked with color-picker) */ 
+$white:                 #FFFFFF;
+$red:                   #C22020;
+$green:                 #68A812;
+$blue:                  #141C37;
+
+$bg-color-primary:      $blue;
+$font-color-button-link:$green;
+$bg-color-validation:   $red;

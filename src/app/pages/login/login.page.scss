@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .main {
   position: relative;
-  color: #ffffff;
-  background-color: #141C37;
+  color: $white;
+  background-color: $bg-color-primary;
   height: calc(100vh - 2.5rem);
   width: 100vw;
 }
@@ -24,7 +26,7 @@
 }
 
 a {
-  color: #68A812;
+  color: $font-color-button-link;
   cursor: pointer;
 
   &:hover {
@@ -33,12 +35,12 @@ a {
 }
 
 button {
-  background-color: #68A812;
-  color: #ffffff;
+  background-color: $font-color-button-link;
+  color: $white;
   cursor: pointer;
 }
 
 .validation {
-  background-color: #C22020;
-  color: #ffffff;
+  background-color: $bg-color-validation;
+  color: $white;
 }

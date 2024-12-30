@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { LogoutButtonComponent } from '../logout-button/logout-button.component';
 
 @Component({
   selector: 'app-header',
+  imports: [LogoutButtonComponent],
   template: `
-    <header>Q90</header>
+    <header>
+      <span>Q90</span>
+      <app-logout-button />
+    </header>
   `,
   styles: `
     header {

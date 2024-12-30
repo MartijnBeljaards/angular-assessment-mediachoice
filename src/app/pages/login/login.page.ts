@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../../services/login.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,34 +10,33 @@ import { Router } from '@angular/router';
 })
 
 export class LoginPage {
+  message: string = '';
 
-  public loginForm!: FormGroup
   constructor(private loginService: LoginService, private router: Router) { }
 
+  // check if the isLoggedIn value is true in the login.service.ts file
+  // (= check if there has been an succesful login before when coming on the login page)
   ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required])
-    })
+    if (this.loginService.checkLoginStatus()) {
+      this.router.navigate(['/home']);
+    }
   }
 
-  login(event: Event) {
-    event.preventDefault(); // Prevent error when submitting ("Cannot match any routes. URL Segment: 'submit'")
-    console.log("Form submitted...");
+  onSubmit(event: Event, username: string, password: string) {
+    event.preventDefault(); // Prevent error when submitting
 
-    if (this.loginForm.valid) {
-      console.log("Submitted values are valid: ", this.loginForm.value);
-    } else {
-      console.log("Not valid values :(", this.loginForm.value);
-    }
-
-    this.loginService.login().subscribe(
+    // 1: login with username + password (in html)
+    // 2: pass username to login.service.ts (= this.loginService)
+    this.loginService.login(username, password).subscribe(
       () => {
-        console.log("Check", this.loginService.isLoggedIn);
         if (this.loginService.isLoggedIn) {
           this.router.navigate([this.loginService.redirectUrl]);
         }
+        
+        if (this.loginService.triggeredValidationMessage !== null) {
+          this.message = this.loginService.triggeredValidationMessage;
+        }
       }
-    )
+    );
   }
 }
