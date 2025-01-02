@@ -1,5 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-@import './app/styles/variables';
+@use './app/styles' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -7,8 +12,39 @@ body {
     padding: 0;
     font-size: $font-basesize;
     line-height: 1.5;
-    box-sizing: border-box;
     font-family: $font-family;
 }
 
-/* font header = weight: 700 */
+h1 {
+    font-size: $fontsize-x-large;
+    margin-bottom: $spacing-large;
+}
+
+label {
+    font-weight: 500;
+}
+
+a {
+    color: $font-color-button-link;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+  
+button {
+    background-color: $font-color-button-link;
+    color: $white;
+    font-size: $fontsize-medium;
+    padding: $spacing-small;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+}
+
+.validation {
+    background-color: $bg-color-validation;
+    color: $white;
+    padding: $spacing-small;
+    border-radius: $border-radius-small;
+}

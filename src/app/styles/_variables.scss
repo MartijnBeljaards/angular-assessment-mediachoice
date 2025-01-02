@@ -1,3 +1,4 @@
+// _variables.scss
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* NOTE: I checked the preview images for what FONT might've been used
@@ -8,12 +9,25 @@
 $font-family:           "Roboto", serif; 
 $font-basesize:         16px;
 
-/* Colors (Picked with color-picker) */ 
-$white:                 #FFFFFF;
-$red:                   #C22020;
-$green:                 #68A812;
-$blue:                  #141C37;
+$header-height:         50px;
+$input-height:          2rem;
 
-$bg-color-primary:      $blue;
-$font-color-button-link:$green;
-$bg-color-validation:   $red;
+$border-radius-small:   5px;
+$border-radius:         10px;
+
+/* Spacing */
+$spacing-x-small:       .25rem;     // 4px
+$spacing-small:         .5rem;      // 8px
+$spacing-medium:        1rem;       // 16px
+$spacing-large:         1.25rem;    // 20px
+$spacing-x-large:       2rem;       // 32px
+$spacing-xx-large:      2.5rem;     // 40px
+
+/* Font-size */
+$fontsize-small:        .75rem;     // 12px
+$fontsize-medium:       1rem;       // 16px
+$fontsize-large:        1.5rem;     // 24px
+$fontsize-x-large:      1.7rem;     
+
+$fontsize-logo:         $fontsize-large;
+$fontsize-title:        $fontsize-x-large;

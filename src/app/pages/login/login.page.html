@@ -1,5 +1,5 @@
-<div class="main">
-  <div class="login-container">
+<main class="login-container">
+  <section class="login-section">
     <form (submit)="onSubmit($event, usernameInput.value, passwordInput.value)">
       <div class="form-control">
         <div class="label-link">
@@ -15,11 +15,13 @@
         </div>
         <input type="password" id="password" #passwordInput />
       </div>
-      <div>
-        <a>Need an activation code?</a>
-        <button type="submit">Sign-in</button>
+      <div class="form-control">
+        <div class="label-link">
+          <a>Need an activation code?</a>
+          <button type="submit">Sign-in</button>
+        </div>
       </div>
       <p class="validation">{{ message }}</p>
     </form>
-  </div>
-</div>
+  </section>
+</main>

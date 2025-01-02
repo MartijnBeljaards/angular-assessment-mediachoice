@@ -1,0 +1,16 @@
+@use '../../styles' as *;
+
+header.dashboard-header {
+  background-color: $bg-color-primary;
+  color: $white;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacing-large;
+
+ .logo {
+    font-size: $fontsize-logo;
+    font-weight: bold;
+  }
+}

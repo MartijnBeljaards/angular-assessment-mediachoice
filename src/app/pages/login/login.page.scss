@@ -1,46 +1,33 @@
-@import '../../styles/variables';
+@use '../../styles' as *;
 
-.main {
+main.login-container {
   position: relative;
   color: $white;
   background-color: $bg-color-primary;
-  height: calc(100vh - 2.5rem);
-  width: 100vw;
-}
-
-.login-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.form-control .label-link {
+  height: calc(100vh - $header-height);
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+  justify-content: center;
+  align-items: center;
 
-.form-control input {
-  width: 100%
-}
-
-a {
-  color: $font-color-button-link;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
+  section.login-section {
+    width: 300px;
   }
 }
 
-button {
-  background-color: $font-color-button-link;
-  color: $white;
-  cursor: pointer;
-}
+.form-control {
+  margin-bottom: $spacing-large;
 
-.validation {
-  background-color: $bg-color-validation;
-  color: $white;
-}
+  .label-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: $spacing-x-small;
+  }
+
+  input {
+    width: 100%;
+    height: $input-height;
+    border-radius: $border-radius-small;
+    padding: 0 $spacing-small;
+  }
+} 
